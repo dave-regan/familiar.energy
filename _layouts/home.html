@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div id="header">
+  <img id="headerImage" src="/assets/duck-rabbit.png">
+  <h2>A collection of uncannily familiar ideas and events.</h2>
+</div>
+<dl id="entries">
+  {%- for entry in site.data.entries -%}
+  <a class="wikipediaLink" href="https://en.wikipedia.org/wiki/{{ entry[0] }}" target="_blank">
+    <div class="entry">
+      <dt>{{ entry[0] }}</dt>
+      <dd>{{ entry[1].extract | truncate: 200, '...' }}</dd>
+    </div>
+  </a>
+  {%- endfor -%}
+</dl>

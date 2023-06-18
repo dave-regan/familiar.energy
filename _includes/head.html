@@ -1,0 +1,83 @@
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+      --text-colour: black;
+      --bg-colour: #FFF5F5;
+  }
+  body {
+    font-family: "Cooper BT";
+    color: var(--text-colour);
+    background-color: var(--bg-colour);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    margin: 0;
+  }
+  #headerImage {
+    width: 100%;
+    max-width: 10em;
+    mix-blend-mode: multiply;
+    border-radius: .25em;
+    margin-bottom: .75em;
+  }
+  #header {
+    background-color: #ffe8e8;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  h2 {
+    font-size: 1.25em;
+    line-height: 150%;
+    font-weight: 300;
+    margin: 0;
+  }
+  .entry {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-bottom: 1.5em;
+  }
+  dl {
+    padding: 1.5em;
+    margin: 0;
+  }
+  dt {
+    font-family: "Cooper BT";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 30%;
+  }
+  dd {
+    margin: 0;
+  }
+  a:link, a:visited {
+    color: var(--text-colour);
+    text-decoration: none;
+  }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      line-height: 150%;
+    }
+    #content {
+      display: flex;
+      flex-direction: row;
+    }
+    #header {
+      box-sizing: border-box;
+      padding: 3em;
+      min-width: 33%;
+    }
+    dl {
+      padding: 3em;
+      max-width: 50em;
+    }
+    .entry {
+      gap: 3em;
+    }
+  }
+</style>
+</head>
