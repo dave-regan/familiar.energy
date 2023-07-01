@@ -3,10 +3,11 @@ layout: default
 ---
 
 <div id="header">
-  <img id="headerImage" src="/assets/duck-rabbit.png">
-  <h2>A collection of uncannily familiar ideas and events.</h2>
+  <img id="headerImage" src="assets/duck-rabbit.png">
+  <h2>A collection of metaphors for modern life.</h2>
 </div>
 <dl id="entries">
+  {{ site.data.entries }}
   {%- for entry in site.data.entries -%}
   <a class="wikipediaLink" href="https://en.wikipedia.org/wiki/{{ entry[0] }}" target="_blank">
     <div class="entry">

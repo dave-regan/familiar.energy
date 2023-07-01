@@ -7,8 +7,15 @@
       --text-colour: black;
       --bg-colour: #FFF5F5;
   }
+
+  @font-face {
+    font-family: 'Cooper';
+    src:  url('assets/cooper_bt_light.woff2') format('woff2'),
+          url('assets/cooper_bt_light.woff') format('woff');
+  }
+
   body {
-    font-family: "Cooper BT";
+    font-family: "Cooper";
     color: var(--text-colour);
     background-color: var(--bg-colour);
     font-weight: 300;
@@ -45,7 +52,7 @@
     margin: 0;
   }
   dt {
-    font-family: "Cooper BT";
+    font-family: "Cooper";
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 30%;

@@ -35,7 +35,7 @@ plugins:
 
 jekyll_get_json:
   - data: entries
-    json: 'https://script.google.com/macros/s/AKfycbwxXkpHuyLkSrxfAO2M1CQgEAv8-ZjCK5rKw6ryPrjoqKQnNbynRKZlydJ7hZBSbV24/exec'
+    json: 'https://script.google.com/macros/s/AKfycbyqp3P_MhKT1htndgVI9Zonej1r59eVqRE7oFPkGosVpsWmWwZi0rJ00fWaGflBRfqmwQ/exec'
 
 # Exclude from processing.
 # The following items will not be processed, by default.
