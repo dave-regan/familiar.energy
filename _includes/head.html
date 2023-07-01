@@ -31,7 +31,6 @@
     margin-bottom: .75em;
   }
   #header {
-    background-color: #ffe8e8;
     padding: 1.5em;
     margin-bottom: 1.5em;
   }
@@ -52,12 +51,21 @@
     margin: 0;
   }
   dt {
-    font-family: "Cooper";
+    min-width: 30%;
+    max-width: 30%;
+  }
+  .title {
     overflow: hidden;
     text-overflow: ellipsis;
-    min-width: 30%;
+  }
+  .date {
+    font-size: .8em;
+    opacity: .5;
   }
   dd {
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
     margin: 0;
   }
   a:link, a:visited {
@@ -76,14 +84,15 @@
     #header {
       box-sizing: border-box;
       padding: 3em;
-      min-width: 33%;
+      min-width: 30%;
+      max-width: 30%;
     }
     dl {
       padding: 3em;
       max-width: 50em;
     }
     .entry {
-      gap: 3em;
+      gap: .5em;
     }
   }
 </style>
