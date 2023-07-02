@@ -5,6 +5,7 @@
 <style>
   :root {
       --text-colour:      black;
+      --secondary-colour: grey;
       --bg-colour:        white;
       --highlight-colour: #F8F0E7;
   }
@@ -29,21 +30,18 @@
     max-width: 10em;
     mix-blend-mode: multiply;
     border-radius: .25em;
-    margin-bottom: .75em;
   }
   #header {
     padding: 1.5em;
-    margin-bottom: 1.5em;
   }
   h2 {
     font-size: 1.25em;
     line-height: 150%;
     font-weight: 300;
-    margin: 0;
   }
   #header a {
-    display: inline-block;
-    background-color: var(--highlight-colour);
+    color: var(--secondary-colour);
+    text-decoration: underline;
   }
   .entry {
     display: flex;
@@ -68,9 +66,8 @@
   .date,
   .byline {
     font-family: monospace;
-    text-transform: uppercase;
     font-size: .75em;
-    opacity: .5;
+    color: var(--secondary-colour);
   }
   dd {
     display: flex;
