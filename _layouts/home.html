@@ -15,7 +15,7 @@ layout: default
       </dt>
       <dd>
         <div class="extract">{{ entry[1].extract | truncate: 199, '...' }}</div>
-        <div class="date">Added on {{ entry[1].created | date: "%e %b %Y, %I:%M%P" }}</div>
+        <div class="date">{{ entry[1].created | date: "%e %b %Y, %I:%M%P" }}</div>
       </dd>
     </div>
   </a>

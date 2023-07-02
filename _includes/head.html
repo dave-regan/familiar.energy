@@ -4,8 +4,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
-      --text-colour: black;
-      --bg-colour: #FFF5F5;
+      --text-colour:      black;
+      --bg-colour:        white;
+      --highlight-colour: #F8F0E7;
   }
 
   @font-face {
@@ -40,13 +41,21 @@
     font-weight: 300;
     margin: 0;
   }
+  #header a {
+    display: inline-block;
+    padding: 0 .25em;
+    border-radius: .25em;
+    background-color: var(--highlight-colour);
+  }
   .entry {
     display: flex;
     flex-direction: row;
     gap: 1em;
-    margin-bottom: 1.5em;
   }
   dl {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
     padding: 1.5em;
     margin: 0;
   }
@@ -56,16 +65,18 @@
   }
   .title {
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: "ellipsis";
   }
   .date {
-    font-size: .8em;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: .75em;
     opacity: .5;
   }
   dd {
     display: flex;
     flex-direction: column;
-    gap: .1em;
+    gap: .25em;
     margin: 0;
   }
   a:link, a:visited {
@@ -88,11 +99,35 @@
       max-width: 30%;
     }
     dl {
-      padding: 3em;
+      padding: 2em;
       max-width: 50em;
     }
     .entry {
       gap: .5em;
+    }
+    .wikipediaLink {
+      display: block;
+      position: relative;
+      padding: 1em;
+    }
+    .wikipediaLink:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: var(--highlight-colour);
+      border-radius: .75em;
+      opacity: 0;
+      transform: scale(0.95);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      transition: all 0.3s ease;      
+    }
+    .wikipediaLink:hover:before {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 </style>
