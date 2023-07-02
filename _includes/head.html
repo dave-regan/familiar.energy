@@ -4,10 +4,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
-      --text-colour:      black;
-      --secondary-colour: grey;
-      --bg-colour:        white;
-      --highlight-colour: #F8F0E7;
+      --1-colour:   rgb(251, 249, 246);
+      --2-colour:   #F8F0E7;
+      --3-colour:   grey;
+      --4-colour:   rgb(64, 54, 54);
+      --5-colour:   rgb(37, 32, 32);
   }
 
   @font-face {
@@ -18,8 +19,8 @@
 
   body {
     font-family: "Cooper";
-    color: var(--text-colour);
-    background-color: var(--bg-colour);
+    color: var(--5-colour);
+    background-color: var(--1-colour);
     font-weight: 300;
     font-size: 16px;
     line-height: 130%;
@@ -28,7 +29,6 @@
   #headerImage {
     width: 100%;
     max-width: 10em;
-    mix-blend-mode: multiply;
     border-radius: .25em;
   }
   #header {
@@ -40,7 +40,7 @@
     font-weight: 300;
   }
   #header a {
-    color: var(--secondary-colour);
+    color: var(--3-colour);
     text-decoration: underline;
   }
   .entry {
@@ -67,7 +67,7 @@
   .byline {
     font-family: monospace;
     font-size: .75em;
-    color: var(--secondary-colour);
+    color: var(--3-colour);
   }
   dd {
     display: flex;
@@ -76,7 +76,7 @@
     margin: 0;
   }
   a:link, a:visited {
-    color: var(--text-colour);
+    color: var(--5-colour);
     text-decoration: none;
   }
   @media (min-width: 1000px) {
@@ -110,7 +110,7 @@
       content: "";
       display: block;
       position: absolute;
-      background-color: var(--highlight-colour);
+      background-color: var(--2-colour);
       border-radius: .75em;
       opacity: 0;
       transform: scale(0.95);
@@ -124,6 +124,18 @@
     .wikipediaLink:hover:before {
       opacity: 1;
       transform: scale(1);
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--5-colour);
+        color: var(--1-colour);
+      }
+      a:link, a:visited {
+        color: var(--1-colour);
+      }
+      .wikipediaLink:before {
+        background-color: var(--4-colour);
+      }
     }
   }
 </style>
