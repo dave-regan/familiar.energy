@@ -1,6 +1,6 @@
 # familiar.energy
 
-Familiar.energy is a collection of ideas and events with versatile shapes: great metaphors that people have already shared, for example, or weirdly congruent, adjacent, and uncanny concepts that feel like metaphors waiting to be made.
+Familiar.energy is a collection of ideas and events with versatile shapes: great metaphors that people have already shared, for example; or weirdly congruent, adjacent, and uncanny concepts that feel like metaphors waiting to be made.
 
 ## How it works
 
