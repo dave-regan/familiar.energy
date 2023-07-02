@@ -11,6 +11,6 @@ The idea for this site came chiefly from [Metaphors We Live By](https://www.goog
 
 ## To do
 
-1. Add a random entry at the top to keep things fresh (Liquid can't sample random items from a collection, though, so I'll need to pass an array in the JSON instead)
+1. Add a random entry at the top to keep things fresh (Liquid can't sample random items from a collection, though, so I'll need to update reading-list-sync to pass entries as an array instead).
 2. Add citations for ideas and events
 3. Break down the composition of good metaphorical candidates so they can be easily rotated for design ideation workshops, etc.
