@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+      --1-colour:   rgb(251, 249, 246);
+      --2-colour:   #F8F0E7;
+      --3-colour:   grey;
+      --4-colour:   rgb(64, 54, 54);
+      --5-colour:   rgb(37, 32, 32);
+  }
+
+  @font-face {
+    font-family: 'Cooper';
+    src:  url('assets/cooper_bt_light.woff2') format('woff2'),
+          url('assets/cooper_bt_light.woff') format('woff');
+  }
+
+  body {
+    font-family: "Cooper";
+    color: var(--5-colour);
+    background-color: var(--1-colour);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    margin: 0;
+  }
+  #headerImage {
+    width: 100%;
+    max-width: 10em;
+    border-radius: .25em;
+  }
+  #header {
+    padding: 1.5em;
+  }
+  h2 {
+    font-size: 1.25em;
+    line-height: 150%;
+    font-weight: 300;
+  }
+  #header a {
+    color: var(--3-colour);
+    text-decoration: underline;
+  }
+  .entry {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  dl {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 1.5em;
+    margin: 0;
+  }
+  dt {
+    min-width: 30%;
+    max-width: 30%;
+  }
+  .title {
+    overflow: hidden;
+    text-overflow: "ellipsis";
+  }
+  .date,
+  .byline {
+    font-family: monospace;
+    font-size: .75em;
+    color: var(--3-colour);
+  }
+  dd {
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    margin: 0;
+  }
+  a:link, a:visited {
+    color: var(--5-colour);
+    text-decoration: none;
+  }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      line-height: 150%;
+    }
+    #content {
+      display: flex;
+      flex-direction: row;
+    }
+    #header {
+      box-sizing: border-box;
+      padding: 3em;
+      min-width: 30%;
+      max-width: 30%;
+    }
+    dl {
+      padding: 2em;
+      max-width: 50em;
+    }
+    .entry {
+      gap: .5em;
+    }
+    .wikipediaLink {
+      display: block;
+      position: relative;
+      padding: 1em;
+    }
+    .wikipediaLink:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: var(--2-colour);
+      border-radius: .75em;
+      opacity: 0;
+      transform: scale(0.95);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      transition: all 0.3s ease;      
+    }
+    .wikipediaLink:hover:before {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--5-colour);
+      color: var(--1-colour);
+    }
+    a:link, a:visited {
+      color: var(--1-colour);
+    }
+    .wikipediaLink:before {
+      background-color: var(--4-colour);
+    }
+  }
+</style>
+</head><body>
+
+    <main id="content" aria-label="Content">
+      <div id="header">
+  <img id="headerImage" src="assets/duck-rabbit.png" alt="An optical illusion that could depict either a rabbit or a duck.">
+  <h2>A collection of ideas and events with versatile shapes.</h2>
+  <div class="byline">A <a href="https://github.com/dave-regan/familiar.energy" target="_blank">project</a> by <a href="https://dave.regan.works" target="_blank">Dave Regan</a>.</div>
+</div>
+<dl id="entries"></dl>
+
+    </main>
+
+  </body>
+
+</html>
